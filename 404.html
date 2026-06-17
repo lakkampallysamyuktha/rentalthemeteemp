@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 – Page Not Found | Stackly</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="404.css" />
+</head>
+<body>
+
+    <!-- ─── BACKGROUND ─── -->
+    <div class="bg-hero"></div>
+    <div class="bg-grid"></div>
+
+    <!-- ─── PARTICLES CANVAS ─── -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- ─── ANIMATED CAR ─── -->
+    <div class="car-container">
+        <div class="car">
+            <div class="car-body">
+                <div class="car-top"></div>
+                <div class="car-window"></div>
+                <div class="car-window-back"></div>
+                <div class="car-headlight"></div>
+                <div class="car-taillight"></div>
+            </div>
+            <div class="car-wheel front"></div>
+            <div class="car-wheel back"></div>
+            <div class="car-shadow"></div>
+        </div>
+    </div>
+
+    <!-- ─── MAIN CARD ─── -->
+    <main>
+        <div class="error-card">
+            <!-- Glow orb -->
+            <div class="glow-orb"></div>
+
+            <!-- 404 Number -->
+            <div class="error-number">
+                <span class="digit">4</span>
+                <span class="digit zero"><i class="fas fa-circle"></i></span>
+                <span class="digit">4</span>
+            </div>
+
+            <!-- Badge -->
+            <div class="error-badge">
+                <i class="fas fa-road"></i>
+                <span>Wrong Turn</span>
+            </div>
+
+            <!-- Message -->
+            <h1 class="error-title">Looks Like You Took a <span>Wrong Turn</span></h1>
+            <p class="error-desc">
+                The page you're looking for doesn't exist or has been moved.
+                Don't worry — even the best drivers take a wrong turn sometimes.
+            </p>
+
+            <!-- ─── UPDATED ACTIONS ─── -->
+            <div class="error-actions">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-home"></i> Back to Home
+                </a>
+                <a href="#" class="btn-outline" onclick="window.history.back(); return false;">
+                    <i class="fas fa-arrow-left"></i> Go Back
+                </a>
+            </div>
+
+            <!-- ─── SEARCH REMOVED ─── -->
+
+            <!-- Footer links -->
+            <div class="error-footer">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="404.js"></script>
+</body>
+</html>

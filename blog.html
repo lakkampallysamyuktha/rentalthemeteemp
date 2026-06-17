@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Blog – Stackly Car Rentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <style>
+        /* ─── SEARCH VALIDATION ─── */
+        .search-error {
+            color: #ff4444;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            display: none;
+            align-items: center;
+            gap: 6px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        .search-error.show {
+            display: flex;
+        }
+        .search-box.error {
+            border-color: #ff4444 !important;
+            box-shadow: 0 0 0 4px rgba(255, 68, 68, 0.12), var(--shadow-blue) !important;
+        }
+        .search-box.error input {
+            color: #ff4444;
+        }
+        .search-box.error input::placeholder {
+            color: rgba(255, 68, 68, 0.5);
+        }
+        .search-box.error i {
+            color: #ff4444;
+        }
+
+        @media (max-width: 700px) {
+            .search-error {
+                font-size: 0.75rem;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LOADER & CURSOR -->
+    <div id="page-loader"><div class="loader-logo">STACKLY</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+    <div class="cursor-glow"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img" /></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login"><i class="fas fa-key"></i> Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <canvas id="blog-particles"></canvas>
+        <div class="blog-hero-content">
+            <div class="hero-badge"><span class="badge-dot"></span> Stackly Journal</div>
+            <h1 class="hero-title">Drive Smarter. <span>Read Deeper.</span></h1>
+            <p class="hero-sub">Expert guides, car spotlights, travel stories &amp; road‑trip inspiration from the Stackly team.</p>
+            <div class="search-wrap">
+                <div class="search-box" id="searchBox">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="Search articles, cars, tips…" />
+                    <button class="search-btn" id="searchBtn">Search</button>
+                </div>
+                <!-- ─── SEARCH ERROR (required validation) ─── -->
+                <div class="search-error" id="searchError">
+                    <i class="fas fa-exclamation-circle"></i> Please enter a search term.
+                </div>
+            </div>
+            <div class="filter-pills">
+                <span class="pill active" data-filter="all">All</span>
+                <span class="pill" data-filter="tips">Driving Tips</span>
+                <span class="pill" data-filter="spotlights">Car Spotlights</span>
+                <span class="pill" data-filter="travel">Travel</span>
+                <span class="pill" data-filter="ev">Electric</span>
+            </div>
+        </div>
+        <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"><div class="scroll-dot"></div></div></div>
+    </section>
+
+    <!-- FEATURED POST -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Editor's Pick</div>
+                <h2 class="section-title">Featured <span>This Week</span></h2>
+            </div>
+            <div class="featured-card fade-up">
+                <div class="featured-img">
+                    <img src="bloghtml.webp" alt="Ferrari 488" />
+                    <span class="featured-tag"><i class="fas fa-fire"></i> Editor's Pick</span>
+                </div>
+                <div class="featured-body">
+                    <div class="post-meta">
+                        <span class="post-cat spotlights">Car Spotlights</span>
+                        <span class="post-date"><i class="fas fa-calendar-alt"></i> Jun 10, 2026</span>
+                        <span class="post-read"><i class="fas fa-clock"></i> 7 min read</span>
+                    </div>
+                    <h2 class="featured-title">Ferrari 488: What It Really Feels Like to Drive a Supercar for a Day</h2>
+                    <p class="featured-excerpt">We handed the keys to our most curious customer and asked him to write about it. What followed was 3,000 kilometres of pure adrenaline, breathtaking mountain roads, and a perspective on performance cars that no spec sheet can capture.</p>
+                    <div class="featured-author">
+                        <div class="author-avatar">A</div>
+                        <div><strong>Arjun Mehta</strong><small>Guest Writer · Mumbai</small></div>
+                    </div>
+                    <a href="#" class="btn btn-primary featured-read-btn">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Latest Articles</div>
+                <h2 class="section-title">Fresh Off the <span>Press</span></h2>
+                <p class="section-sub">Stories, tips, and guides from the road.</p>
+            </div>
+            <div class="blog-grid" id="blogGrid"></div>
+            <div class="load-more-wrap fade-up">
+                <button class="btn btn-outline" id="loadMoreBtn"><i class="fas fa-sync-alt"></i> Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIDEBAR -->
+    <section class="sidebar-section">
+        <div class="container">
+            <div class="sidebar-layout">
+                <div class="trending-col">
+                    <div class="section-label fade-up">Trending Now</div>
+                    <h2 class="section-title fade-up">What Readers <span>Are Loving</span></h2>
+                    <div class="trending-list" id="trendingList"></div>
+                </div>
+                <div class="aside-col">
+                    <div class="topics-card fade-up">
+                        <h4><i class="fas fa-tags"></i> Browse by Topic</h4>
+                        <div class="topic-tags" id="topicTags"></div>
+                    </div>
+                    <div class="newsletter-card fade-up">
+                        <div class="nl-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <h4>Get the Weekly Digest</h4>
+                        <p>Top articles, new car drops, and exclusive road-trip guides — straight to your inbox.</p>
+                        <div class="nl-form">
+                            <input type="email" id="sidebarEmail" placeholder="Your email address" />
+                            <button id="sidebarSubscribe" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="newsletter-error" id="sidebarError"><i class="fas fa-exclamation-circle"></i> Please enter a valid email.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo-wrap"><img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img" /></div>
+                    <p>India's most trusted premium car rental platform. Experience the road like never before.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+                <div class="footer-col"><h4>Our Fleet</h4><ul><li><a href="services.html">Luxury Cars</a></li><li><a href="services.html">SUVs</a></li><li><a href="services.html">Electric Vehicles</a></li><li><a href="services.html">Sports Cars</a></li><li><a href="services.html">Economy Cars</a></li></ul></div>
+                <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">24/7 Helpline</a></li><li><a href="#">FAQs</a></li><li><a href="#">Cancellation Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li></ul></div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get exclusive offers &amp; new car alerts.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" id="footerEmail" />
+                        <button id="footerSubscribe"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="newsletter-error" id="newsletterError"><i class="fas fa-exclamation-circle"></i> Please enter a valid email.</div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Stackly Car Rentals. All rights reserved. | Designed for the open road.</p></div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="blog.js"></script>
+</body>
+</html>

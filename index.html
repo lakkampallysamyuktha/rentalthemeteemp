@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly – Premium Car Rentals USA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="page-loader">
+        <div class="loader-logo">STACKLY</div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor-glow"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- ✅ Login button inside hamburger – placed at the bottom -->
+                <li><a href="login.html" class="nav-btn-login"><i class="fas fa-key"></i> Login</a></li>
+            </ul>
+            <!-- Login button – desktop only -->
+
+            <!-- HAMBURGER -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <!-- Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <!-- HERO (unchanged) -->
+    <section class="hero" id="hero">
+        <div class="hero-slides">
+            <div class="slide active" style="background-image:url('index11.webp')"></div>
+            <div class="slide" style="background-image:url('index1.webp')"></div>
+            <div class="slide" style="background-image:url('index2\ \(1\).webp')"></div>
+            <div class="slide" style="background-image:url('index3\ \(1\).webp')"></div>
+            <div class="slide" style="background-image:url('index4\ \(1\).webp')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge"><span class="badge-dot"></span> Premium Car Rental USA</div>
+            <h1 class="hero-title">
+                <span class="line1">DRIVE YOUR</span>
+                <span class="line2">DREAM</span>
+                <span class="line3">EXPERIENCE</span>
+            </h1>
+            <p class="hero-sub">500+ luxury, sports & electric vehicles across the USA. Best rates. 24/7 support. Book in 60 seconds.</p>
+            <div class="hero-btns">
+                <a href="services.html" class="btn btn-primary"><i class="fas fa-car"></i> Browse Services</a>
+                <a href="pricing.html" class="btn btn-outline">View Pricing</a>
+            </div>
+            <div class="hero-stats">
+                <div class="h-stat"><span class="h-num" data-target="500">0</span><span class="h-lbl">Premium Cars</span></div>
+                <div class="h-divider"></div>
+                <div class="h-stat"><span class="h-num" data-target="50000">0</span><span class="h-lbl">Happy Clients</span></div>
+                <div class="h-divider"></div>
+                <div class="h-stat"><span class="h-num" data-target="50">0</span><span class="h-lbl">US Locations</span></div>
+            </div>
+        </div>
+
+        <div class="slide-dots">
+            <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <button class="slide-arrow prev" id="slidePrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slide-arrow next" id="slideNext"><i class="fas fa-chevron-right"></i></button>
+        <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"><div class="scroll-dot"></div></div></div>
+    </section>
+
+    <!-- BOOKING BAR -->
+    <section class="booking-section">
+        <div class="booking-container">
+            <form id="bookingForm" class="booking-card" onsubmit="return handleBookingSubmit(event)">
+                <div class="booking-field">
+                    <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                    <select id="bookingLocation" required>
+                        <option value="">Select City</option>
+                        <option value="New York">New York, NY</option>
+                        <option value="Los Angeles">Los Angeles, CA</option>
+                        <option value="Chicago">Chicago, IL</option>
+                        <option value="Miami">Miami, FL</option>
+                        <option value="Las Vegas">Las Vegas, NV</option>
+                        <option value="San Francisco">San Francisco, CA</option>
+                        <option value="Dallas">Dallas, TX</option>
+                        <option value="Seattle">Seattle, WA</option>
+                        <option value="Denver">Denver, CO</option>
+                        <option value="Boston">Boston, MA</option>
+                        <option value="Washington">Washington, DC</option>
+                        <option value="Atlanta">Atlanta, GA</option>
+                    </select>
+                </div>
+                <div class="booking-field">
+                    <label><i class="fas fa-calendar"></i> Pickup</label>
+                    <input type="date" id="pickupDate" required />
+                </div>
+                <div class="booking-field">
+                    <label><i class="fas fa-calendar-check"></i> Return</label>
+                    <input type="date" id="returnDate" required />
+                </div>
+                <div class="booking-field">
+                    <label><i class="fas fa-car-side"></i> Car Type</label>
+                    <select id="carType" required>
+                        <option value="">All Types</option>
+                        <option value="economy">Economy</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="electric">Electric</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary booking-btn">
+                    Search Cars <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker-section">
+        <div class="ticker-wrap"><div class="ticker-track">
+            <span><i class="fas fa-car"></i> Toyota Corolla – $35/day</span>
+            <span><i class="fas fa-car"></i> Honda Civic – $40/day</span>
+            <span><i class="fas fa-car"></i> BMW 7 Series – $350/day</span>
+            <span><i class="fas fa-bolt"></i> Tesla Model S – $320/day</span>
+            <span><i class="fas fa-truck"></i> Range Rover Sport – $480/day</span>
+            <span><i class="fas fa-flag-checkered"></i> Ferrari 488 – $750/day</span>
+            <span><i class="fas fa-gem"></i> Rolls-Royce Ghost – $2,200/day</span>
+            <span><i class="fas fa-charging-station"></i> Porsche Taycan – $620/day</span>
+            <span><i class="fas fa-car"></i> Lamborghini Huracán – $1,050/day</span>
+            <span><i class="fas fa-car"></i> Audi Q8 – $420/day</span>
+        </div></div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Our Premium Services</div>
+                <h2 class="section-title">Choose Your <span>Perfect Ride</span></h2>
+                <p class="section-sub">From everyday economy to heart‑pounding performance — 500+ vehicles across the USA</p>
+            </div>
+            <div class="services-tabs fade-up">
+                <button class="tab-btn active" data-cat="all">All</button>
+                <button class="tab-btn" data-cat="economy">Economy</button>
+                <button class="tab-btn" data-cat="suv">SUV</button>
+                <button class="tab-btn" data-cat="luxury">Luxury</button>
+                <button class="tab-btn" data-cat="electric">Electric</button>
+                <button class="tab-btn" data-cat="sports">Sports</button>
+            </div>
+            <div class="services-grid" id="servicesGrid"></div>
+            <div class="services-cta fade-up">
+                <div class="services-cta-sub">Over 50+ premium models available</div>
+                <a href="404.html" class="btn btn-outline">Explore All Vehicles <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section" id="stats">
+        <div class="stats-bg"></div>
+        <div class="container stats-grid">
+            <div class="stat-item fade-up">
+                <div class="stat-icon"><i class="fas fa-car"></i></div>
+                <div class="stat-num" data-target="500">0</div>
+                <div class="stat-lbl">Premium Vehicles</div>
+            </div>
+            <div class="stat-item fade-up">
+                <div class="stat-icon"><i class="fas fa-smile"></i></div>
+                <div class="stat-num" data-target="50000">0</div>
+                <div class="stat-lbl">Happy Customers</div>
+            </div>
+            <div class="stat-item fade-up">
+                <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="stat-num" data-target="50">0</div>
+                <div class="stat-lbl">US Cities</div>
+            </div>
+            <div class="stat-item fade-up">
+                <div class="stat-icon"><i class="fas fa-star"></i></div>
+                <div class="stat-num" data-target="4">0</div>
+                <div class="stat-lbl">Avg Rating (4.9★)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-section">
+        <div class="container">
+            <div class="why-inner">
+                <div class="why-left slide-right">
+                    <div class="section-label">Why Stackly</div>
+                    <h2 class="section-title">More Than Just <span>A Car Rental</span></h2>
+                    <div class="why-features">
+                        <div class="why-feat">
+                            <div class="feat-icon"><i class="fas fa-bolt"></i></div>
+                            <div><h4>Instant Booking</h4><p>Reserve in under 60 seconds</p></div>
+                        </div>
+                        <div class="why-feat">
+                            <div class="feat-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div><h4>Full Insurance</h4><p>Comprehensive coverage included</p></div>
+                        </div>
+                        <div class="why-feat">
+                            <div class="feat-icon"><i class="fas fa-truck"></i></div>
+                            <div><h4>Free Delivery</h4><p>Car arrives at your doorstep</p></div>
+                        </div>
+                        <div class="why-feat">
+                            <div class="feat-icon"><i class="fas fa-headset"></i></div>
+                            <div><h4>24/7 Support</h4><p>Always one call away</p></div>
+                        </div>
+                    </div>
+                    <a href="404.html" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="why-right slide-left">
+                    <div class="why-img-wrap">
+                        <img src="index1.webp" alt="Luxury Car">
+                        <div class="why-badge"><span class="wb-num">12+</span><span class="wb-txt">Years of Trust</span></div>
+                        <div class="why-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Testimonials</div>
+                <h2 class="section-title">What Our <span>Drivers Say</span></h2>
+                <p class="section-sub">Real experiences from real customers across the USA</p>
+            </div>
+            <div class="testi-marquee">
+                <div class="testi-marquee-track" id="testiMarquee"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="howitworks-section">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Process</div>
+                <h2 class="section-title">Book in <span>4 Easy Steps</span></h2>
+                <p class="section-sub">Simple, transparent, and fast – get on the road in no time</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card fade-up"><div class="step-number">01</div><h3>Choose Your Car</h3><p>Browse our fleet, filter by category, and find the perfect match.</p></div>
+                <div class="step-card fade-up"><div class="step-number">02</div><h3>Pick Dates</h3><p>Select pickup and drop‑off dates. Flexible plans.</p></div>
+                <div class="step-card fade-up"><div class="step-number">03</div><h3>Confirm & Pay</h3><p>Secure checkout with credit card, PayPal, or Apple Pay.</p></div>
+                <div class="step-card fade-up"><div class="step-number">04</div><h3>Drive Away</h3><p>Your car arrives at your door, fully serviced.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-particles-bg"></div>
+        <div class="cta-inner fade-up">
+            <div class="cta-badge">Limited Offer</div>
+            <h2 class="cta-title">Ready to <span>Drive?</span></h2>
+            <p class="cta-sub">Join <strong>50,000+</strong> customers who trust Stackly.<br>Get <strong class="highlight">15% off</strong> your first rental with code <a href="services.html" style="text-decoration: none; color: inherit;"><span class="code">STACKLY15</span></a></p>
+            <div class="cta-btns">
+                <a href="404.html" class="btn btn-primary btn-large"><i class="fas fa-calendar-check"></i> Book Your Car</a>
+                <a href="404.html" class="btn btn-outline btn-large"><i class="fas fa-headset"></i> Contact Us</a>
+            </div>
+            <div class="cta-trust">
+                <span><i class="fas fa-shield-alt"></i> No hidden fees</span>
+                <span><i class="fas fa-clock"></i> Free cancellation</span>
+                <span><i class="fas fa-car"></i> Instant confirmation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo-wrap">
+                        <img src="logo-removebg-preview.webp" alt="Stackly">
+                        
+                    </div>
+                    <p>America's most trusted premium car rental platform. Experience the road like never before.</p>
+                    <div class="footer-social">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Fleet</h4>
+                    <ul>
+                        <li><a href="services.html">Luxury Cars</a></li>
+                        <li><a href="services.html">SUVs</a></li>
+                        <li><a href="services.html">Electric Vehicles</a></li>
+                        <li><a href="services.html">Sports Cars</a></li>
+                        <li><a href="services.html">Economy Cars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">24/7 Helpline</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                        <li><a href="404.html">Cancellation Policy</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get exclusive offers & new car alerts.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" id="footerEmail">
+                        <button id="footerSubscribe"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="newsletter-error" id="newsletterError"><i class="fas fa-exclamation-circle"></i> Please enter a valid email.</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Car Rentals USA. All rights reserved. | Designed for the open road.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

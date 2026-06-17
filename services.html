@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Services – Stackly Premium Car Rentals USA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+<div id="page-loader"><div class="loader-logo">STACKLY</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+<div class="cursor-glow"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="nav-btn-login"><i class="fas fa-key"></i> Login</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="ham-line ham-top"></span>
+            <span class="ham-line ham-mid"></span>
+            <span class="ham-line ham-bot"></span>
+        </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+</nav>
+
+<!-- HERO -->
+<section class="sv-hero">
+  <canvas id="sv-particles"></canvas>
+  <div class="sv-hero-bg" style="background-image:url('services1.webp')"></div>
+  <div class="sv-hero-overlay"></div>
+
+  <div class="sv-hero-content">
+    <div class="section-label fade-up"><span class="badge-dot"></span> Our Services</div>
+    <h1 class="sv-hero-title fade-up">Every Drive.<br><span>Every Need.</span><br>Covered.</h1>
+    <p class="sv-hero-sub fade-up">From economy runs to supercar experiences — 500+ vehicles, 6 service tiers, zero compromise. Find your perfect match below.</p>
+
+    <div class="sv-hero-cats fade-up">
+      <a href="404.html" class="sv-cat-pill" data-cat="all"><i class="fas fa-th"></i> All</a>
+      <a href="404.html" class="sv-cat-pill" data-cat="economy"><i class="fas fa-gas-pump"></i> Economy</a>
+      <a href="404.html" class="sv-cat-pill" data-cat="suv"><i class="fas fa-truck"></i> SUV</a>
+      <a href="404.html" class="sv-cat-pill" data-cat="luxury"><i class="fas fa-gem"></i> Luxury</a>
+      <a href="404.html" class="sv-cat-pill" data-cat="electric"><i class="fas fa-bolt"></i> Electric</a>
+      <a href="404.html" class="sv-cat-pill" data-cat="sports"><i class="fas fa-flag-checkered"></i> Sports</a>
+    </div>
+
+    <div class="sv-hero-stats fade-up">
+      <div class="sv-hstat"><span class="sv-hnum" data-target="500" data-suffix="+">0</span><span>Vehicles</span></div>
+      <div class="sv-hdiv"></div>
+      <div class="sv-hstat"><span class="sv-hnum" data-target="6" data-suffix=" Tiers">0</span><span>Categories</span></div>
+      <div class="sv-hdiv"></div>
+      <div class="sv-hstat"><span class="sv-hnum" data-target="50" data-suffix="+">0</span><span>US Cities</span></div>
+      <div class="sv-hdiv"></div>
+      <div class="sv-hstat"><span class="sv-hnum" data-target="24" data-suffix="/7">0</span><span>Support</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE TIERS -->
+<section class="sv-tiers-section">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-label">Service Tiers</div>
+      <h2 class="section-title">Six Ways to <span>Hit the Road</span></h2>
+      <p class="section-sub">Every tier is built around a different kind of journey. Pick yours.</p>
+    </div>
+
+    <div class="sv-tiers-grid">
+      <!-- Economy -->
+      <div class="sv-tier-card fade-up" data-color="#6b7280">
+        <div class="sv-tier-img">
+          <img src="services2.webp" alt="Economy">
+          <div class="sv-tier-badge" style="background:#6b7280">ECONOMY</div>
+        </div>
+        <div class="sv-tier-body">
+          <div class="sv-tier-icon" style="background:rgba(107,114,128,0.12);color:#9ca3af"><i class="fas fa-gas-pump"></i></div>
+          <h3>Economy</h3>
+          <p>Smart, fuel-efficient cars for everyday commutes, errands, and city drives. Easy on the wallet, hard on the road.</p>
+          <ul class="sv-tier-features">
+            <li><i class="fas fa-check"></i> 30–50 mpg fuel efficiency</li>
+            <li><i class="fas fa-check"></i> Hatchbacks & compact sedans</li>
+            <li><i class="fas fa-check"></i> Manual & automatic options</li>
+            <li><i class="fas fa-check"></i> Free doorstep delivery</li>
+          </ul>
+          <div class="sv-tier-footer">
+            <div class="sv-tier-price">From <strong>$35</strong><span>/day</span></div>
+            <a href="404.html" class="btn btn-outline btn-sm sv-book-trigger" data-cat="economy">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUV -->
+      <div class="sv-tier-card fade-up" data-color="#2ecc71">
+        <div class="sv-tier-img">
+          <img src="services3.webp" alt="SUV">
+          <div class="sv-tier-badge" style="background:#2ecc71">SUV</div>
+        </div>
+        <div class="sv-tier-body">
+          <div class="sv-tier-icon" style="background:rgba(46,204,113,0.12);color:#2ecc71"><i class="fas fa-truck"></i></div>
+          <h3>SUV</h3>
+          <p>Space, power, and presence. Perfect for family road trips, mountain drives, and carrying everything you need.</p>
+          <ul class="sv-tier-features">
+            <li><i class="fas fa-check"></i> 5–7 seater options</li>
+            <li><i class="fas fa-check"></i> AWD & 4x4 variants</li>
+            <li><i class="fas fa-check"></i> Large cargo space</li>
+            <li><i class="fas fa-check"></i> Child seat available</li>
+          </ul>
+          <div class="sv-tier-footer">
+            <div class="sv-tier-price">From <strong>$165</strong><span>/day</span></div>
+            <a href="404.html" class="btn btn-outline btn-sm sv-book-trigger" data-cat="suv">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Luxury -->
+      <div class="sv-tier-card fade-up" data-color="#00a3ff">
+        <div class="sv-tier-img">
+          <img src="services4.webp" alt="Luxury">
+          <div class="sv-tier-badge" style="background:#00a3ff">LUXURY</div>
+        </div>
+        <div class="sv-tier-body">
+          <div class="sv-tier-icon" style="background:rgba(0,163,255,0.12);color:#00a3ff"><i class="fas fa-gem"></i></div>
+          <h3>Luxury</h3>
+          <p>Arrive at every occasion in absolute refinement. BMWs, Mercedes, Rolls-Royce — driven by those who demand the best.</p>
+          <ul class="sv-tier-features">
+            <li><i class="fas fa-check"></i> Premium interiors</li>
+            <li><i class="fas fa-check"></i> Chauffeur option available</li>
+            <li><i class="fas fa-check"></i> Concierge support</li>
+            <li><i class="fas fa-check"></i> Fully insured</li>
+          </ul>
+          <div class="sv-tier-footer">
+            <div class="sv-tier-price">From <strong>$345</strong><span>/day</span></div>
+            <a href="404.html" class="btn btn-outline btn-sm sv-book-trigger" data-cat="luxury">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Electric -->
+      <div class="sv-tier-card fade-up" data-color="#1e90ff">
+        <div class="sv-tier-img">
+          <img src="servies5.webp" alt="Electric">
+          <div class="sv-tier-badge" style="background:#1e90ff">ELECTRIC</div>
+        </div>
+        <div class="sv-tier-body">
+          <div class="sv-tier-icon" style="background:rgba(30,144,255,0.12);color:#1e90ff"><i class="fas fa-bolt"></i></div>
+          <h3>Electric</h3>
+          <p>Zero emissions, maximum performance. Tesla, Porsche Taycan, Hyundai IONIQ — the future of driving, today.</p>
+          <ul class="sv-tier-features">
+            <li><i class="fas fa-check"></i> 250–370 mile range</li>
+            <li><i class="fas fa-check"></i> Home charging kit included</li>
+            <li><i class="fas fa-check"></i> Fast-charge network access</li>
+            <li><i class="fas fa-check"></i> Carbon-offset certificate</li>
+          </ul>
+          <div class="sv-tier-footer">
+            <div class="sv-tier-price">From <strong>$195</strong><span>/day</span></div>
+            <a href="404.html" class="btn btn-outline btn-sm sv-book-trigger" data-cat="electric">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sports -->
+      <div class="sv-tier-card fade-up" data-color="#e63946">
+        <div class="sv-tier-img">
+          <img src="services6.webp" alt="Sports">
+          <div class="sv-tier-badge" style="background:#e63946">SPORTS</div>
+        </div>
+        <div class="sv-tier-body">
+          <div class="sv-tier-icon" style="background:rgba(230,57,70,0.12);color:#e63946"><i class="fas fa-flag-checkered"></i></div>
+          <h3>Sports</h3>
+          <p>Ferrari, Lamborghini, Porsche 911. For the days when you need to feel something extraordinary. Pure adrenaline.</p>
+          <ul class="sv-tier-features">
+            <li><i class="fas fa-check"></i> Supercar & hypercar options</li>
+            <li><i class="fas fa-check"></i> Track-day packages available</li>
+            <li><i class="fas fa-check"></i> Performance briefing included</li>
+            <li><i class="fas fa-check"></i> GoPro mount pre-installed</li>
+          </ul>
+          <div class="sv-tier-footer">
+            <div class="sv-tier-price">From <strong>$620</strong><span>/day</span></div>
+            <a href="404.html" class="btn btn-outline btn-sm sv-book-trigger" data-cat="sports">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chauffeur -->
+      <div class="sv-tier-card fade-up sv-tier-chauffeur" data-color="#f59e0b">
+        <div class="sv-tier-img">
+          <img src="services7.webp" alt="Chauffeur">
+          <div class="sv-tier-badge" style="background:#f59e0b;color:#000">CHAUFFEUR</div>
+        </div>
+        <div class="sv-tier-body">
+          <div class="sv-tier-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b"><i class="fas fa-user-tie"></i></div>
+          <h3>Chauffeur</h3>
+          <p>Our most exclusive service. A trained, uniformed driver in a top-tier vehicle — for weddings, events, and VIP transfers.</p>
+          <ul class="sv-tier-features">
+            <li><i class="fas fa-check"></i> Uniformed professional driver</li>
+            <li><i class="fas fa-check"></i> Flight tracking & meet & greet</li>
+            <li><i class="fas fa-check"></i> Red carpet roll-out available</li>
+            <li><i class="fas fa-check"></i> Corporate billing accepted</li>
+          </ul>
+          <div class="sv-tier-footer">
+            <div class="sv-tier-price">From <strong>$480</strong><span>/day</span></div>
+            <a href="404.html" class="btn btn-sm" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#000;font-weight:700">Enquire <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL FLEET -->
+<section class="sv-fleet-section" id="fleet">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-label">Full Fleet</div>
+      <h2 class="section-title">Browse <span>Every Vehicle</span></h2>
+      <p class="section-sub">Filter by category, sort by price, find your match.</p>
+    </div>
+
+    <div class="sv-filter-bar fade-up">
+      <div class="sv-filter-tabs" id="svFilterTabs">
+        <button class="sv-tab active" data-cat="all">All <span class="sv-tab-count" id="count-all"></span></button>
+        <button class="sv-tab" data-cat="economy">Economy</button>
+        <button class="sv-tab" data-cat="suv">SUV</button>
+        <button class="sv-tab" data-cat="luxury">Luxury</button>
+        <button class="sv-tab" data-cat="electric">Electric</button>
+        <button class="sv-tab" data-cat="sports">Sports</button>
+      </div>
+      <div class="sv-sort-wrap">
+        <label><i class="fas fa-sort-amount-up"></i></label>
+        <select id="svSort">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="name">Name A–Z</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="sv-fleet-grid" id="svFleetGrid"></div>
+
+    <div class="sv-no-results" id="svNoResults" style="display:none">
+      <i class="fas fa-car-crash"></i>
+      <p>No vehicles match your filter. Try a different category.</p>
+    </div>
+
+    <div class="sv-load-more-wrap fade-up">
+      <button class="btn btn-outline" id="svLoadMore"><i class="fas fa-plus"></i> Load More Vehicles</button>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="sv-addons-section">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-label">Add-Ons</div>
+      <h2 class="section-title">Enhance Your <span>Rental</span></h2>
+      <p class="section-sub">Optional extras to make every journey smoother, safer, and more memorable.</p>
+    </div>
+
+    <div class="sv-addons-grid">
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4>Zero-Deductible Insurance</h4>
+        <p>Drive with total peace of mind. Our premium cover eliminates your excess — any damage, any accident, fully covered.</p>
+        <div class="sv-addon-price">+$11 <span>/day</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-child"></i></div>
+        <h4>Child Safety Seat</h4>
+        <p>Certified infant, toddler, and booster seats. Fitted by our team before handover, removed free of charge on return.</p>
+        <div class="sv-addon-price">+$4 <span>/day</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h4>GPS Navigator</h4>
+        <p>Pre-loaded US maps with live traffic. Never miss a turn, never pay roaming charges for data navigation again.</p>
+        <div class="sv-addon-price">+$3 <span>/day</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-gas-pump"></i></div>
+        <h4>Full-to-Full Fuel Plan</h4>
+        <p>Pick up with a full tank, return empty. We handle the refuel — no receipts, no queues, no math at the pump.</p>
+        <div class="sv-addon-price">+$7 <span>flat</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-user-tie"></i></div>
+        <h4>Personal Chauffeur</h4>
+        <p>Add a trained, uniformed driver to any vehicle booking. Ideal for weddings, corporate events, or airport pickups.</p>
+        <div class="sv-addon-price">+$35 <span>/day</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-wifi"></i></div>
+        <h4>In-Car Wi-Fi Hotspot</h4>
+        <p>Unlimited 5G data hotspot device pre-installed. Stay connected across all 50+ Stackly cities without a local SIM.</p>
+        <div class="sv-addon-price">+$3.50 <span>/day</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-camera"></i></div>
+        <h4>Dashcam & GoPro Mount</h4>
+        <p>Capture your drive. Our dashcam protects you legally; the GoPro mount lets you record epic road-trip footage.</p>
+        <div class="sv-addon-price">+$5 <span>/day</span></div>
+      </div>
+      <div class="sv-addon-card fade-up">
+        <div class="sv-addon-icon"><i class="fas fa-truck"></i></div>
+        <h4>Doorstep Delivery & Return</h4>
+        <p>We bring the car to your home, hotel, or office — and pick it up from wherever suits you. Available 24/7.</p>
+        <div class="sv-addon-price">+$5.50 <span>flat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BOOK + QUICK FORM -->
+<section class="sv-book-section">
+  <div class="sv-book-bg"></div>
+  <div class="container">
+    <div class="sv-book-inner">
+      <div class="sv-book-steps slide-right">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Book in <span>60 Seconds</span></h2>
+        <p style="color:var(--text-secondary);margin:12px 0 36px;line-height:1.8">No paperwork, no queues. Stackly's four-step booking is the fastest in the industry.</p>
+
+        <div class="sv-steps">
+          <div class="sv-step">
+            <div class="sv-step-num">01</div>
+            <div class="sv-step-body">
+              <h4>Pick Your Car</h4>
+              <p>Browse 500+ vehicles, filter by type and city, compare specs side by side.</p>
+            </div>
+          </div>
+          <div class="sv-step">
+            <div class="sv-step-num">02</div>
+            <div class="sv-step-body">
+              <h4>Choose Dates & Add-Ons</h4>
+              <p>Set pickup and return dates. Stack optional extras at checkout in seconds.</p>
+            </div>
+          </div>
+          <div class="sv-step">
+            <div class="sv-step-num">03</div>
+            <div class="sv-step-body">
+              <h4>Pay Securely</h4>
+              <p>Credit card, PayPal, or corporate invoice. Encrypted checkout. Instant confirmation.</p>
+            </div>
+          </div>
+          <div class="sv-step">
+            <div class="sv-step-num">04</div>
+            <div class="sv-step-body">
+              <h4>We Deliver, You Drive</h4>
+              <p>Your car arrives fully serviced at your doorstep. Keys in hand, road ahead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- QUICK BOOKING FORM – UPDATED WITH NAME ATTRIBUTES AND ACTION -->
+      <div class="sv-book-form-wrap slide-left">
+        <div class="sv-book-form">
+          <div class="sv-form-head">
+            <h3>Quick Booking</h3>
+            <p>Fill in the details below and we'll confirm within 15 minutes.</p>
+          </div>
+
+        <form id="svQuickForm" action="404.html" method="GET">
+  <div class="sv-form-grid">
+    <div class="sv-form-field full">
+      <label><i class="fas fa-map-marker-alt"></i> City / Airport</label>
+      <input type="text" name="city" placeholder="e.g. Los Angeles, LAX" required>
+    </div>
+    <div class="sv-form-field">
+      <label><i class="fas fa-calendar"></i> Pickup Date</label>
+      <input type="date" name="pickup" required>
+    </div>
+    <div class="sv-form-field">
+      <label><i class="fas fa-calendar-check"></i> Return Date</label>
+      <input type="date" name="return" required>
+    </div>
+    <div class="sv-form-field">
+      <label><i class="fas fa-car-side"></i> Car Type</label>
+      <select name="carType" required>
+        <option value="">All Types</option>
+        <option value="economy">Economy</option>
+        <option value="suv">SUV</option>
+        <option value="luxury">Luxury</option>
+        <option value="electric">Electric</option>
+        <option value="sports">Sports</option>
+        <option value="chauffeur">Chauffeur</option>
+      </select>
+    </div>
+    <div class="sv-form-field">
+      <label><i class="fas fa-users"></i> Passengers</label>
+      <select name="passengers" required>
+        <option value="">Select</option>
+        <option value="1-2">1–2</option>
+        <option value="3-4">3–4</option>
+        <option value="5-6">5–6</option>
+        <option value="7+">7+</option>
+      </select>
+    </div>
+    <div class="sv-form-field full">
+      <label><i class="fas fa-tag"></i> Promo Code</label>
+      <input type="text" name="promo" placeholder="e.g. STACKLY15">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary sv-form-submit">
+    <i class="fas fa-search"></i> Find Available Cars
+  </button>
+
+  <div class="sv-form-trust">
+    <span><i class="fas fa-lock"></i> Secure checkout</span>
+    <span><i class="fas fa-undo"></i> Free cancellation</span>
+    <span><i class="fas fa-clock"></i> 15-min confirmation</span>
+  </div>
+</form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <canvas class="cta-canvas" id="ctaCanvas"></canvas>
+  <div class="cta-bg-image"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-inner fade-up">
+    <div class="cta-badge"><span class="badge-dot"></span> Limited Offer — Ends Soon</div>
+    <h2 class="cta-title">Ready to <span>Drive?</span></h2>
+    <p class="cta-sub">Join <strong>50,000+</strong> customers who trust Stackly for every journey.</p>
+    <div class="cta-offer-box">
+      <div class="cta-offer-left">
+        <span class="offer-pct">15<sup>%</sup></span>
+        <span class="offer-label">OFF your first rental</span>
+      </div>
+      <div class="cta-offer-divider"></div>
+      <div class="cta-offer-right">
+        <span class="offer-copy-label">Use code at checkout</span>
+        <span class="code" id="ctaCode">STACKLY15</span>
+        <button class="copy-btn" id="copyCode"><i class="fas fa-copy"></i> <span id="copyText">Copy</span></button>
+      </div>
+    </div>
+    <div class="cta-btns">
+      <a href="404.html" class="btn btn-primary btn-large"><i class="fas fa-car"></i> Browse services</a>
+      <a href="404.html" class="btn btn-outline btn-large"><i class="fas fa-headset"></i> Contact Us</a>
+    </div>
+    <div class="cta-trust">
+      <span><i class="fas fa-shield-alt"></i> No hidden fees</span>
+      <span><i class="fas fa-clock"></i> Free cancellation</span>
+      <span><i class="fas fa-car"></i> Instant confirmation</span>
+      <span><i class="fas fa-headset"></i> 24/7 support</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo-wrap"><img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img"></div>
+        <p>America's most trusted premium car rental platform. Experience the road like never before.</p>
+        <div class="footer-social">
+          <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+          <a href="404.html"><i class="fab fa-twitter"></i></a>
+          <a href="404.html"><i class="fab fa-instagram"></i></a>
+          <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Our Fleet</h4><ul>
+        <li><a href="services.html">Luxury Cars</a></li><li><a href="services.html">SUVs</a></li>
+        <li><a href="services.html">Electric Vehicles</a></li><li><a href="services.html">Sports Cars</a></li>
+        <li><a href="services.html">Economy Cars</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Support</h4><ul>
+        <li><a href="contact.html">24/7 Helpline</a></li><li><a href="404.html">FAQs</a></li>
+        <li><a href="404.html">Cancellation Policy</a></li><li><a href="404.html">Privacy Policy</a></li>
+        <li><a href="404.html">Terms & Conditions</a></li>
+      </ul></div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to get exclusive offers & new car alerts.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email address" id="footerEmail">
+          <button id="footerSubscribe"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <div class="newsletter-error" id="newsletterError"><i class="fas fa-exclamation-circle"></i> Please enter a valid email.</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Stackly Car Rentals USA. All rights reserved. | Designed for the open road.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+<script src="services.js"></script>
+</body>
+</html>

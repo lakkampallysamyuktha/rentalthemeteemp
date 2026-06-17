@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viewer Dashboard – Stackly</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard-viewer.css" />
+</head>
+<body>
+
+    <!-- ─── BACKGROUND ─── -->
+    <div class="bg-hero"></div>
+    <div class="bg-grid"></div>
+
+    <!-- ─── SIDEBAR ─── -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand-link">
+                <!-- ✅ Logo image instead of text icon -->
+                <img src="logo-removebg-preview.webp" alt="Stackly" style="height:40px; width:auto; filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(500%) hue-rotate(185deg) brightness(110%) contrast(101%);" />
+                <span class="brand-name">STACKLY</span>
+            </a>
+            <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section">Main</div>
+            <a href="#" class="nav-item active" data-page="overview">
+                <i class="fas fa-th-large"></i>
+                <span>Overview</span>
+            </a>
+            <a href="#" class="nav-item" data-page="fleet">
+                <i class="fas fa-car"></i>
+                <span>Browse Fleet</span>
+            </a>
+            <a href="#" class="nav-item" data-page="bookings">
+                <i class="fas fa-calendar-check"></i>
+                <span>My Bookings</span>
+                <span class="nav-badge">3</span>
+            </a>
+
+            <div class="nav-section">Account</div>
+            <a href="#" class="nav-item" data-page="profile">
+                <i class="fas fa-user-circle"></i>
+                <span>My Profile</span>
+            </a>
+            <a href="#" class="nav-item" data-page="settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+
+            <div class="nav-section">Support</div>
+            <a href="#" class="nav-item" data-page="help">
+                <i class="fas fa-question-circle"></i>
+                <span>Help & Support</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="404.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- ─── OVERLAY ─── -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ─── TOPBAR ─── -->
+    <header class="topbar" id="topbar">
+        <div class="topbar-left">
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="topbar-title" id="pageTitle">Overview</h1>
+        </div>
+        <div class="topbar-right">
+            <button class="topbar-btn" onclick="location.href='404.html'">
+                <i class="fas fa-bell"></i>
+            </button>
+            <button class="topbar-btn" onclick="location.href='404.html'">
+                <i class="fas fa-search"></i>
+            </button>
+            <div class="user-profile">
+                <div class="user-avatar" id="viewerAvatar">V</div>
+                <div class="user-info">
+                    <span class="user-name" id="viewerName">Viewer</span>
+                    <span class="user-role">Viewer</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ─── MAIN CONTENT ─── -->
+    <main class="main-content">
+
+        <!-- ═══ OVERVIEW ═══ -->
+        <section class="page active" id="page-overview">
+            <!-- Greeting -->
+            <div class="greeting-card">
+                <div>
+                    <h2>Welcome back, <span id="greetName">Viewer</span> 👋</h2>
+                    <p>Explore our fleet and manage your rentals</p>
+                </div>
+                <div class="greeting-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Active Session</span>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fas fa-car"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">48</span>
+                        <span class="stat-label">Available Cars</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">My Bookings</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange"><i class="fas fa-clock"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">1</span>
+                        <span class="stat-label">Pending Requests</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fas fa-star"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">4.8</span>
+                        <span class="stat-label">My Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Cars -->
+            <div class="section-header">
+                <h3><i class="fas fa-star"></i> Featured Vehicles</h3>
+                <a href="#" class="section-link" onclick="navigateTo('fleet')">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="featured-grid" id="featuredGrid"></div>
+
+            <!-- My Recent Bookings -->
+            <div class="table-card">
+                <div class="table-header">
+                    <h3><i class="fas fa-clock"></i> Recent Bookings</h3>
+                    <a href="#" class="table-link" onclick="navigateTo('bookings')">View All</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Vehicle</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-001</td>
+                                <td>Tesla Model 3</td>
+                                <td>2026-06-18</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-005</td>
+                                <td>Audi e-tron</td>
+                                <td>2026-06-25</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">Details</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-008</td>
+                                <td>BMW i4</td>
+                                <td>2026-06-10</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">Details</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FLEET ═══ -->
+        <section class="page" id="page-fleet">
+            <h2 class="page-heading">Browse Fleet</h2>
+            <div class="fleet-controls">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="economy">Economy</button>
+                    <button class="filter-btn" data-filter="suv">SUV</button>
+                    <button class="filter-btn" data-filter="luxury">Luxury</button>
+                    <button class="filter-btn" data-filter="electric">Electric</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                </div>
+                <div class="sort-group">
+                    <label><i class="fas fa-sort-amount-up"></i></label>
+                    <select id="fleetSort">
+                        <option value="default">Default</option>
+                        <option value="price-asc">Price: Low → High</option>
+                        <option value="price-desc">Price: High → Low</option>
+                        <option value="name">Name A–Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fleet-grid" id="fleetGrid"></div>
+            <div class="load-more-wrap">
+                <button class="btn-primary-sm" id="loadMoreBtn"><i class="fas fa-plus"></i> Load More</button>
+            </div>
+        </section>
+
+        <!-- ═══ MY BOOKINGS ═══ -->
+        <section class="page" id="page-bookings">
+            <h2 class="page-heading">My Bookings</h2>
+            <div class="table-card">
+                <div class="table-header">
+                    <h3><i class="fas fa-calendar-alt"></i> All Bookings</h3>
+                    <button class="btn-primary-sm" onclick="alert('Book a new car')">
+                        <i class="fas fa-plus"></i> New Booking
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Vehicle</th>
+                                <th>Pickup</th>
+                                <th>Return</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-001</td>
+                                <td>Tesla Model 3</td>
+                                <td>2026-06-18</td>
+                                <td>2026-06-21</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-005</td>
+                                <td>Audi e-tron</td>
+                                <td>2026-06-25</td>
+                                <td>2026-06-28</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-008</td>
+                                <td>BMW i4</td>
+                                <td>2026-06-10</td>
+                                <td>2026-06-12</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-012</td>
+                                <td>Porsche 911</td>
+                                <td>2026-07-05</td>
+                                <td>2026-07-07</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-015</td>
+                                <td>Range Rover Sport</td>
+                                <td>2026-07-12</td>
+                                <td>2026-07-15</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td><button class="action-btn" onclick="alert('View booking details')">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ PROFILE ═══ -->
+        <section class="page" id="page-profile">
+            <h2 class="page-heading">My Profile</h2>
+            <div class="profile-card">
+                <div class="profile-avatar" id="profileAvatar">V</div>
+                <h3 id="profileName">Viewer</h3>
+                <p class="profile-email" id="profileEmail">viewer@stackly.com</p>
+                <div class="profile-badge">Viewer</div>
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <span class="ps-val">12</span>
+                        <span class="ps-lbl">Total Rentals</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="ps-val">4.8</span>
+                        <span class="ps-lbl">Rating</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="ps-val">3</span>
+                        <span class="ps-lbl">Active Bookings</span>
+                    </div>
+                </div>
+                <button class="btn-primary-sm" onclick="alert('Edit profile')"><i class="fas fa-edit"></i> Edit Profile</button>
+            </div>
+        </section>
+
+        <!-- ═══ SETTINGS ═══ -->
+        <section class="page" id="page-settings">
+            <h2 class="page-heading">Settings</h2>
+            <div class="settings-list">
+                <div class="setting-item">
+                    <div>
+                        <h4>Email Notifications</h4>
+                        <p>Booking confirmations, reminders, offers</p>
+                    </div>
+                    <button class="btn-primary-sm" onclick="alert('Configure notifications')">Configure</button>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h4>Language & Region</h4>
+                        <p>English (IN) · Currency: INR</p>
+                    </div>
+                    <button class="btn-primary-sm" onclick="alert('Change language')">Change</button>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h4>Change Password</h4>
+                        <p>Update your account password</p>
+                    </div>
+                    <button class="btn-primary-sm" onclick="alert('Change password')">Update</button>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h4>Payment Methods</h4>
+                        <p>Manage saved cards & UPI</p>
+                    </div>
+                    <button class="btn-primary-sm" onclick="alert('Manage payment methods')">Manage</button>
+                </div>
+                <div class="setting-item danger">
+                    <div>
+                        <h4>Delete Account</h4>
+                        <p>Permanently delete your account and data</p>
+                    </div>
+                    <button class="btn-danger" onclick="alert('Delete account?')">Delete</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ HELP ═══ -->
+        <section class="page" id="page-help">
+            <h2 class="page-heading">Help & Support</h2>
+            <div class="help-grid">
+                <div class="help-card">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Customer Support</h4>
+                    <p>Call us anytime at <strong>+91 98765 43210</strong></p>
+                    <button class="btn-primary-sm" onclick="alert('Call support')">Call Now</button>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Support</h4>
+                    <p>Send us an email at <strong>help@stackly.in</strong></p>
+                    <button class="btn-primary-sm" onclick="alert('Email support')">Send Email</button>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>FAQs</h4>
+                    <p>Find answers to common questions</p>
+                    <button class="btn-primary-sm" onclick="location.href='404.html'">View FAQs</button>
+                </div>
+                <div class="help-card">
+                    <i class="fas fa-comment-dots"></i>
+                    <h4>Live Chat</h4>
+                    <p>Chat with our support team instantly</p>
+                    <button class="btn-primary-sm" onclick="alert('Start live chat')">Start Chat</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="dashboard-viewer.js"></script>
+</body>
+</html>

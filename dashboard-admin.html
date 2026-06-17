@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard – Stackly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard-admin.css" />
+</head>
+<body>
+
+    <div class="bg-hero"></div>
+    <div class="bg-grid"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-brand">
+            <a href="index.html" class="brand-link">
+                <!-- ✅ Logo image instead of text -->
+                <img src="logo-removebg-preview.webp" alt="Stackly" style="height:40px; width:auto; filter: brightness(0) saturate(100%) invert(42%) sepia(99%) saturate(500%) hue-rotate(185deg) brightness(110%) contrast(101%);" />
+                <span class="brand-name">STACKLY</span>
+            </a>
+            <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="nav-section">Main</div>
+            <a href="#" class="nav-item active" data-page="overview">
+                <i class="fas fa-th-large"></i>
+                <span>Overview</span>
+            </a>
+            <a href="#" class="nav-item" data-page="bookings">
+                <i class="fas fa-calendar-check"></i>
+                <span>Bookings</span>
+                <span class="nav-badge">12</span>
+            </a>
+            <a href="#" class="nav-item" data-page="fleet">
+                <i class="fas fa-car"></i>
+                <span>Fleet Manager</span>
+            </a>
+            <a href="#" class="nav-item" data-page="users">
+                <i class="fas fa-users"></i>
+                <span>Users</span>
+            </a>
+
+            <div class="nav-section">Analytics</div>
+            <a href="#" class="nav-item" data-page="revenue">
+                <i class="fas fa-chart-line"></i>
+                <span>Revenue</span>
+            </a>
+            <a href="#" class="nav-item" data-page="reports">
+                <i class="fas fa-file-alt"></i>
+                <span>Reports</span>
+            </a>
+
+            <div class="nav-section">System</div>
+            <a href="#" class="nav-item" data-page="settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <a href="#" class="nav-item" data-page="logs">
+                <i class="fas fa-terminal"></i>
+                <span>Activity Logs</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <!-- ✅ Logout → 404.html -->
+            <a href="index.html" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- TOPBAR -->
+    <header class="topbar" id="topbar">
+        <div class="topbar-left">
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="topbar-title" id="pageTitle">Overview</h1>
+        </div>
+        <div class="topbar-right">
+            <!-- ✅ Bell → 404.html -->
+            <button class="topbar-btn" onclick="location.href='404.html'">
+                <i class="fas fa-bell"></i>
+                <span class="notif-dot"></span>
+            </button>
+            <!-- ✅ Search → 404.html -->
+            <button class="topbar-btn" onclick="location.href='404.html'">
+                <i class="fas fa-search"></i>
+            </button>
+            <div class="user-profile">
+                <div class="user-avatar" id="adminAvatar">A</div>
+                <div class="user-info">
+                    <span class="user-name" id="adminName">Admin</span>
+                    <span class="user-role">Administrator</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- ═══ OVERVIEW ═══ -->
+        <section class="page active" id="page-overview">
+            <div class="greeting-card">
+                <div>
+                    <h2>Welcome back, <span id="greetName">Admin</span> 👋</h2>
+                    <p>Here's what's happening with your fleet today</p>
+                </div>
+                <div class="greeting-badges">
+                    <span class="badge success"><i class="fas fa-check-circle"></i> All systems online</span>
+                    <span class="badge warning"><i class="fas fa-exclamation-triangle"></i> 3 alerts</span>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fas fa-car"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">48</span>
+                        <span class="stat-label">Available Cars</span>
+                    </div>
+                    <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 8%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">23</span>
+                        <span class="stat-label">Active Bookings</span>
+                    </div>
+                    <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 12%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">$48.2K</span>
+                        <span class="stat-label">Revenue (Month)</span>
+                    </div>
+                    <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 23%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">1,284</span>
+                        <span class="stat-label">Total Users</span>
+                    </div>
+                    <div class="stat-trend up"><i class="fas fa-arrow-up"></i> 5%</div>
+                </div>
+            </div>
+
+            <div class="charts-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-chart-bar"></i> Weekly Bookings</h3>
+                        <a href="404.html" class="chart-link">View All</a>
+                    </div>
+                    <div class="chart-bars" id="weeklyChart"></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3><i class="fas fa-car"></i> Fleet Status</h3>
+                        <a href="404.html" class="chart-link">Manage</a>
+                    </div>
+                    <div class="fleet-status-list" id="fleetStatus"></div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <div class="table-header">
+                    <h3><i class="fas fa-clock"></i> Recent Bookings</h3>
+                    <a href="404.html" class="table-link">View All</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Customer</th>
+                                <th>Vehicle</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-001</td>
+                                <td>John Doe</td>
+                                <td>Tesla Model 3</td>
+                                <td>2026-06-18</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td><button class="action-btn" data-href="404.html">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-002</td>
+                                <td>Sarah Lee</td>
+                                <td>BMW i4</td>
+                                <td>2026-06-20</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" data-href="404.html">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-003</td>
+                                <td>Mike Chen</td>
+                                <td>Audi e-tron</td>
+                                <td>2026-06-15</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                                <td><button class="action-btn" data-href="404.html">View</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-004</td>
+                                <td>Emily Park</td>
+                                <td>Ford Mustang</td>
+                                <td>2026-06-22</td>
+                                <td><span class="status-badge cancelled">Cancelled</span></td>
+                                <td><button class="action-btn" data-href="404.html">View</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ BOOKINGS ═══ -->
+        <section class="page" id="page-bookings">
+            <h2 class="page-heading">All Bookings</h2>
+            <div class="table-card">
+                <div class="table-header">
+                    <h3><i class="fas fa-calendar-alt"></i> Booking Management</h3>
+                    <button class="btn-primary-sm" data-href="404.html">
+                        <i class="fas fa-plus"></i> New Booking
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Booking ID</th>
+                                <th>Customer</th>
+                                <th>Vehicle</th>
+                                <th>Pickup</th>
+                                <th>Return</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#BK-001</td>
+                                <td>John Doe</td>
+                                <td>Tesla Model 3</td>
+                                <td>2026-06-18</td>
+                                <td>2026-06-21</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td><button class="action-btn" data-href="404.html">Manage</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-002</td>
+                                <td>Sarah Lee</td>
+                                <td>BMW i4</td>
+                                <td>2026-06-20</td>
+                                <td>2026-06-23</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" data-href="404.html">Manage</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-005</td>
+                                <td>Rahul Patel</td>
+                                <td>Range Rover Sport</td>
+                                <td>2026-06-25</td>
+                                <td>2026-06-28</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" data-href="404.html">Manage</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-006</td>
+                                <td>Priya Sharma</td>
+                                <td>Porsche 911</td>
+                                <td>2026-06-27</td>
+                                <td>2026-06-29</td>
+                                <td><span class="status-badge confirmed">Confirmed</span></td>
+                                <td><button class="action-btn" data-href="404.html">Manage</button></td>
+                            </tr>
+                            <tr>
+                                <td>#BK-007</td>
+                                <td>Arjun Mehta</td>
+                                <td>Rolls-Royce Ghost</td>
+                                <td>2026-07-01</td>
+                                <td>2026-07-03</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td><button class="action-btn" data-href="404.html">Manage</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ FLEET ═══ -->
+        <section class="page" id="page-fleet">
+            <h2 class="page-heading">Fleet Manager</h2>
+            <div class="fleet-controls">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="economy">Economy</button>
+                    <button class="filter-btn" data-filter="suv">SUV</button>
+                    <button class="filter-btn" data-filter="luxury">Luxury</button>
+                    <button class="filter-btn" data-filter="electric">Electric</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                </div>
+                <button class="btn-primary-sm" data-href="404.html">
+                    <i class="fas fa-plus"></i> Add Vehicle
+                </button>
+            </div>
+            <div class="fleet-grid" id="fleetGrid"></div>
+        </section>
+
+        <!-- ═══ USERS ═══ -->
+        <section class="page" id="page-users">
+            <h2 class="page-heading">User Management</h2>
+            <div class="table-card">
+                <div class="table-header">
+                    <h3><i class="fas fa-users-cog"></i> All Users</h3>
+                    <button class="btn-primary-sm" data-href="404.html">
+                        <i class="fas fa-user-plus"></i> Invite
+                    </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@stackly.com</td>
+                                <td>Admin</td>
+                                <td><span class="status-badge confirmed">Active</span></td>
+                                <td>2026-01-15</td>
+                                <td><button class="action-btn" data-href="404.html">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Lee</td>
+                                <td>sarah@stackly.com</td>
+                                <td>Viewer</td>
+                                <td><span class="status-badge confirmed">Active</span></td>
+                                <td>2026-02-20</td>
+                                <td><button class="action-btn" data-href="404.html">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mike Chen</td>
+                                <td>mike@stackly.com</td>
+                                <td>Viewer</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                                <td>2026-03-10</td>
+                                <td><button class="action-btn" data-href="404.html">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>Emily Park</td>
+                                <td>emily@stackly.com</td>
+                                <td>Admin</td>
+                                <td><span class="status-badge confirmed">Active</span></td>
+                                <td>2026-04-05</td>
+                                <td><button class="action-btn" data-href="404.html">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ REVENUE ═══ (fixed mobile overflow) -->
+        <section class="page" id="page-revenue">
+            <h2 class="page-heading">Revenue Overview</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fas fa-dollar-sign"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">$48.2K</span>
+                        <span class="stat-label">This Month</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fas fa-arrow-up"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">+23.7%</span>
+                        <span class="stat-label">Growth Rate</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange"><i class="fas fa-calendar"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">$342K</span>
+                        <span class="stat-label">Year to Date</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fas fa-star"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-value">4.89</span>
+                        <span class="stat-label">Avg. Rating</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-card" style="overflow-x:auto;">
+                <div class="chart-header">
+                    <h3><i class="fas fa-chart-area"></i> Revenue Trend</h3>
+                    <a href="404.html" class="chart-link">Export</a>
+                </div>
+                <div class="revenue-chart" id="revenueChart" style="min-width:300px;"></div>
+            </div>
+        </section>
+
+        <!-- ═══ REPORTS ═══ -->
+        <section class="page" id="page-reports">
+            <h2 class="page-heading">Reports</h2>
+            <div class="reports-grid">
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <h4>Monthly Summary — June 2026</h4>
+                        <p>Full KPI breakdown</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Download</button>
+                </div>
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <h4>Fleet Utilization Report</h4>
+                        <p>Q2 2026 analysis</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Download</button>
+                </div>
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <h4>Revenue Analysis — FY 2026</h4>
+                        <p>Full year forecast</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Download</button>
+                </div>
+                <div class="report-card">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <h4>Customer Satisfaction Report</h4>
+                        <p>Feedback & ratings</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Download</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SETTINGS ═══ -->
+        <section class="page" id="page-settings">
+            <h2 class="page-heading">Settings</h2>
+            <div class="settings-list">
+                <div class="setting-item">
+                    <div>
+                        <h4>General Settings</h4>
+                        <p>Company name, logo, contact info</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Configure</button>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h4>Payment Configuration</h4>
+                        <p>Stripe, PayPal, UPI settings</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Configure</button>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h4>Email Notifications</h4>
+                        <p>Booking confirmations, reminders</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Configure</button>
+                </div>
+                <div class="setting-item">
+                    <div>
+                        <h4>Security & 2FA</h4>
+                        <p>Two-factor authentication, sessions</p>
+                    </div>
+                    <button class="btn-primary-sm" data-href="404.html">Configure</button>
+                </div>
+                <div class="setting-item danger">
+                    <div>
+                        <h4>Danger Zone</h4>
+                        <p>Reset system, delete all data</p>
+                    </div>
+                    <button class="btn-danger" data-href="404.html">Reset System</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ LOGS ═══ -->
+        <section class="page" id="page-logs">
+            <h2 class="page-heading">Activity Logs</h2>
+            <div class="log-terminal" id="logTerminal"></div>
+            <button class="btn-primary-sm" data-href="404.html">
+                <i class="fas fa-download"></i> Export Logs
+            </button>
+        </section>
+
+    </main>
+
+    <script src="dashboard-admin.js"></script>
+</body>
+</html>

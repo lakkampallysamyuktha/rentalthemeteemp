@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Pricing – Stackly Premium Car Rentals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+<body>
+
+  <!-- LOADER & CURSOR -->
+  <div id="page-loader"><div class="loader-logo">STACKLY</div><div class="loader-bar"><div class="loader-bar-fill"></div></div></div>
+  <div class="cursor-glow"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img" /></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="nav-btn-login"><i class="fas fa-key"></i> Login</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="ham-line ham-top"></span>
+        <span class="ham-line ham-mid"></span>
+        <span class="ham-line ham-bot"></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- PRICING HERO -->
+  <section class="pricing-hero">
+    <canvas id="pricing-particles"></canvas>
+    <div class="pricing-hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> Transparent Pricing</div>
+      <h1 class="hero-title">Plans for <span>Every Driver</span></h1>
+      <p class="hero-sub">No hidden fees. No surprises. Just the open road and your perfect ride.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num" data-target="3" data-suffix="">0</span>
+          <span class="label">Plans</span>
+        </div>
+        <div class="hero-stat"><div class="divider"></div></div>
+        <div class="hero-stat">
+          <span class="num" data-target="20" data-suffix="%">0</span>
+          <span class="label">Annual Savings</span>
+        </div>
+        <div class="hero-stat"><div class="divider"></div></div>
+        <div class="hero-stat">
+          <span class="num" data-target="500" data-suffix="+">0</span>
+          <span class="label">Vehicles</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><span>Scroll</span><div class="scroll-line"><div class="scroll-dot"></div></div></div>
+  </section>
+
+  <!-- PLANS SECTION -->
+  <section class="plans-section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div class="section-label">Choose Your Plan</div>
+        <h2 class="section-title">Flexible <span>Memberships</span></h2>
+        <p class="section-sub">From weekend getaways to daily commuters — a plan built for you.</p>
+      </div>
+
+      <div class="billing-toggle fade-up">
+        <span class="toggle-label" id="lblMonthly">Monthly</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="billingToggle" />
+          <span class="toggle-knob"></span>
+        </label>
+        <span class="toggle-label" id="lblAnnual">Annual <span class="save-badge">Save 20%</span></span>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Starter -->
+        <div class="plan-card fade-up" data-monthly="15" data-annual="12">
+          <div class="plan-icon"><i class="fas fa-car"></i></div>
+          <div class="plan-name">Starter</div>
+          <div class="plan-tagline">Perfect for occasional drivers</div>
+          <div class="plan-price-wrap">
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="15" data-annual="12">15</span>
+              <span class="period">/mo</span>
+            </div>
+            <div class="plan-billed">Billed monthly</div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Up to 3 bookings/month</li>
+            <li><i class="fas fa-check"></i> Economy &amp; Hatchback fleet</li>
+            <li><i class="fas fa-check"></i> Basic insurance included</li>
+            <li><i class="fas fa-check"></i> Email support</li>
+            <li><i class="fas fa-check"></i> Free cancellation (24 hrs)</li>
+            <li class="disabled"><i class="fas fa-times"></i> Priority car selection</li>
+            <li class="disabled"><i class="fas fa-times"></i> Doorstep delivery</li>
+          </ul>
+          <a href="404.html" class="btn btn-outline plan-btn">Get Started</a>
+        </div>
+
+        <!-- Pro (Popular) -->
+        <div class="plan-card plan-popular fade-up" data-monthly="35" data-annual="28">
+          <div class="plan-popular-badge"><i class="fas fa-bolt"></i> Most Popular</div>
+          <div class="plan-icon"><i class="fas fa-star"></i></div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-tagline">For the everyday road warrior</div>
+          <div class="plan-price-wrap">
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="35" data-annual="28">35</span>
+              <span class="period">/mo</span>
+            </div>
+            <div class="plan-billed">Billed monthly</div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Unlimited bookings</li>
+            <li><i class="fas fa-check"></i> Economy, SUV &amp; Sedan fleet</li>
+            <li><i class="fas fa-check"></i> Comprehensive insurance</li>
+            <li><i class="fas fa-check"></i> Priority 24/7 support</li>
+            <li><i class="fas fa-check"></i> Free cancellation (48 hrs)</li>
+            <li><i class="fas fa-check"></i> Priority car selection</li>
+            <li><i class="fas fa-check"></i> Doorstep delivery</li>
+          </ul>
+          <a href="404.html" class="btn btn-primary plan-btn">Get Pro</a>
+        </div>
+
+        <!-- Elite -->
+        <div class="plan-card fade-up" data-monthly="85" data-annual="68">
+          <div class="plan-icon"><i class="fas fa-gem"></i></div>
+          <div class="plan-name">Elite</div>
+          <div class="plan-tagline">Luxury without limits</div>
+          <div class="plan-price-wrap">
+            <div class="plan-price">
+              <span class="currency">$</span>
+              <span class="amount" data-monthly="85" data-annual="68">85</span>
+              <span class="period">/mo</span>
+            </div>
+            <div class="plan-billed">Billed monthly</div>
+          </div>
+          <ul class="plan-features">
+            <li><i class="fas fa-check"></i> Unlimited bookings</li>
+            <li><i class="fas fa-check"></i> Full fleet access incl. supercar</li>
+            <li><i class="fas fa-check"></i> Zero-excess insurance</li>
+            <li><i class="fas fa-check"></i> Dedicated concierge</li>
+            <li><i class="fas fa-check"></i> Free cancellation (anytime)</li>
+            <li><i class="fas fa-check"></i> Priority car selection</li>
+            <li><i class="fas fa-check"></i> White-glove delivery</li>
+            <li><i class="fas fa-check"></i> Loyalty rewards &amp; upgrades</li>
+          </ul>
+          <a href="404.html" class="btn btn-outline plan-btn">Go Elite</a>
+        </div>
+      </div>
+
+      <div class="enterprise-strip fade-up">
+        <div class="enterprise-left">
+          <i class="fas fa-building enterprise-icon"></i>
+          <div>
+            <div class="enterprise-title">Corporate &amp; Fleet Solutions</div>
+            <div class="enterprise-sub">Custom pricing for companies booking 10+ vehicles a month. GST invoice, dedicated account manager, priority fleet.</div>
+          </div>
+        </div>
+        <a href="404.html" class="btn btn-primary">Talk to Sales <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAY-PER-RIDE RATES -->
+  <section class="rates-section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div class="section-label">Pay Per Ride</div>
+        <h2 class="section-title">No Subscription? <span>No Problem.</span></h2>
+        <p class="section-sub">Pick a car, pay only for what you need. Transparent daily rates with zero hidden costs.</p>
+      </div>
+      <div class="rates-grid">
+        <div class="rate-card fade-up"><div class="rate-icon economy-icon"><i class="fas fa-car"></i></div><div class="rate-name">Economy</div><div class="rate-desc">Swift · i20 · WagonR</div><div class="rate-row"><span>Half Day</span><span class="rate-price">$20</span></div><div class="rate-row"><span>Full Day</span><span class="rate-price">$40</span></div><div class="rate-row"><span>Weekend</span><span class="rate-price">$100</span></div><div class="rate-row"><span>Weekly</span><span class="rate-price">$220</span></div></div>
+        <div class="rate-card fade-up"><div class="rate-icon suv-icon"><i class="fas fa-truck"></i></div><div class="rate-name">SUV</div><div class="rate-desc">Audi Q8 · Range Rover · Q5</div><div class="rate-row"><span>Half Day</span><span class="rate-price">$70</span></div><div class="rate-row"><span>Full Day</span><span class="rate-price">$120</span></div><div class="rate-row"><span>Weekend</span><span class="rate-price">$320</span></div><div class="rate-row"><span>Weekly</span><span class="rate-price">$700</span></div></div>
+        <div class="rate-card fade-up"><div class="rate-icon luxury-icon"><i class="fas fa-gem"></i></div><div class="rate-name">Luxury</div><div class="rate-desc">BMW 7 · Mercedes S · Rolls-Royce</div><div class="rate-row"><span>Half Day</span><span class="rate-price">$140</span></div><div class="rate-row"><span>Full Day</span><span class="rate-price">$250</span></div><div class="rate-row"><span>Weekend</span><span class="rate-price">$650</span></div><div class="rate-row"><span>Weekly</span><span class="rate-price">$1,400</span></div></div>
+        <div class="rate-card fade-up"><div class="rate-icon sports-icon"><i class="fas fa-flag-checkered"></i></div><div class="rate-name">Sports</div><div class="rate-desc">Ferrari · Lamborghini · Porsche</div><div class="rate-row"><span>Half Day</span><span class="rate-price">$280</span></div><div class="rate-row"><span>Full Day</span><span class="rate-price">$500</span></div><div class="rate-row"><span>Weekend</span><span class="rate-price">$1,200</span></div><div class="rate-row"><span>Weekly</span><span class="rate-price">$2,800</span></div></div>
+        <div class="rate-card fade-up"><div class="rate-icon electric-icon"><i class="fas fa-bolt"></i></div><div class="rate-name">Electric</div><div class="rate-desc">Tesla S · IONIQ 6 · Taycan</div><div class="rate-row"><span>Half Day</span><span class="rate-price">$50</span></div><div class="rate-row"><span>Full Day</span><span class="rate-price">$100</span></div><div class="rate-row"><span>Weekend</span><span class="rate-price">$260</span></div><div class="rate-row"><span>Weekly</span><span class="rate-price">$580</span></div></div>
+        <div class="rate-card rate-promo fade-up">
+          <div class="promo-inner">
+            <div class="promo-icon"><i class="fas fa-tag"></i></div>
+            <div class="promo-title">First Ride Offer</div>
+            <div class="promo-code">STACKLY15</div>
+            <div class="promo-desc">Get <strong>15% off</strong> your first pay-per-ride booking. No minimum spend.</div>
+            <a href="404.html" class="btn btn-primary">Book Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="compare-section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div class="section-label">Compare Plans</div>
+        <h2 class="section-title">Everything <span>Side by Side</span></h2>
+        <p class="section-sub">See exactly what each plan includes before you commit.</p>
+      </div>
+      <div class="compare-wrap fade-up">
+        <div class="compare-table">
+          <div class="ct-header">
+            <div class="ct-cell ct-feature-col"></div>
+            <div class="ct-cell ct-plan-col"><div class="ct-plan-name">Starter</div><div class="ct-plan-price">$15<small>/mo</small></div></div>
+            <div class="ct-cell ct-plan-col ct-popular-col"><div class="ct-popular-label"><i class="fas fa-bolt"></i> Popular</div><div class="ct-plan-name">Pro</div><div class="ct-plan-price">$35<small>/mo</small></div></div>
+            <div class="ct-cell ct-plan-col"><div class="ct-plan-name">Elite</div><div class="ct-plan-price">$85<small>/mo</small></div></div>
+          </div>
+          <div class="ct-group-label">Booking</div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Monthly Bookings</div><div class="ct-cell">Up to 3</div><div class="ct-cell ct-popular-col">Unlimited</div><div class="ct-cell">Unlimited</div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Advance Booking Window</div><div class="ct-cell">7 days</div><div class="ct-cell ct-popular-col">30 days</div><div class="ct-cell">90 days</div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Priority Car Selection</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-group-label">Fleet Access</div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Economy &amp; Hatchback</div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">SUV &amp; Sedan</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Luxury &amp; Supercar</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-times ct-no"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-group-label">Insurance</div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Basic Coverage</div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Comprehensive Coverage</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Zero Excess</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-times ct-no"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-group-label">Service</div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Support</div><div class="ct-cell">Email</div><div class="ct-cell ct-popular-col">24/7 Priority</div><div class="ct-cell">Dedicated Concierge</div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Doorstep Delivery</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-check ct-yes"></i></div><div class="ct-cell">White-glove</div></div>
+          <div class="ct-row"><div class="ct-cell ct-feature-col">Loyalty &amp; Upgrade Rewards</div><div class="ct-cell"><i class="fas fa-times ct-no"></i></div><div class="ct-cell ct-popular-col"><i class="fas fa-times ct-no"></i></div><div class="ct-cell"><i class="fas fa-check ct-yes"></i></div></div>
+          <div class="ct-row ct-cta-row">
+            <div class="ct-cell ct-feature-col"></div>
+            <div class="ct-cell"><a href="404.html" class="btn btn-outline btn-sm">Start Free</a></div>
+            <div class="ct-cell ct-popular-col"><a href="404.html" class="btn btn-primary btn-sm">Get Pro</a></div>
+            <div class="ct-cell"><a href="404.html" class="btn btn-outline btn-sm">Go Elite</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-head fade-up">
+        <div class="section-label">FAQs</div>
+        <h2 class="section-title">Got <span>Questions?</span></h2>
+        <p class="section-sub">Everything you need to know before you hit the road.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item fade-up"><div class="faq-icon"><i class="fas fa-sync-alt"></i></div><h4>Can I switch plans mid-month?</h4><p>Yes — upgrades are instant and prorated. Downgrades take effect from the next billing cycle.</p></div>
+        <div class="faq-item fade-up"><div class="faq-icon"><i class="fas fa-id-card"></i></div><h4>What documents do I need to rent?</h4><p>A valid driving licence (held for at least 1 year), one government-issued photo ID, and a credit/debit card for the security deposit.</p></div>
+        <div class="faq-item fade-up"><div class="faq-icon"><i class="fas fa-gas-pump"></i></div><h4>Is fuel included in the price?</h4><p>Fuel is not included – you rent with a full tank and return it full. Electric vehicles get free charging at Stackly partner hubs.</p></div>
+        <div class="faq-item fade-up"><div class="faq-icon"><i class="fas fa-road"></i></div><h4>What happens if I exceed the km limit?</h4><p>Extra kilometres are billed at $0.15/km for Economy, $0.25/km for SUV &amp; Luxury, and $0.35/km for Sports cars. Elite members get unlimited kilometres.</p></div>
+        <div class="faq-item fade-up"><div class="faq-icon"><i class="fas fa-credit-card"></i></div><h4>How does the security deposit work?</h4><p>A hold is placed on your card at pickup ($100–$800 depending on car category). Released within 3–5 business days after a clean return.</p></div>
+        <div class="faq-item fade-up"><div class="faq-icon"><i class="fas fa-calendar-check"></i></div><h4>Can I cancel or modify a booking?</h4><p>Starter: 24 hrs before pickup. Pro: 48 hrs. Elite: anytime. Modifications are always free.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <div class="logo-wrap"><img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img" /></div>
+          <p>India's most trusted premium car rental platform. Experience the road like never before.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Our Fleet</h4><ul><li><a href="services.html">Luxury Cars</a></li><li><a href="services.html">SUVs</a></li><li><a href="services.html">Electric Vehicles</a></li><li><a href="services.html">Sports Cars</a></li><li><a href="services.html">Economy Cars</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="contact.html">24/7 Helpline</a></li><li><a href="#">FAQs</a></li><li><a href="#">Cancellation Policy</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li></ul></div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to get exclusive offers &amp; new car alerts.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" id="footerEmail" />
+            <button id="footerSubscribe"><i class="fas fa-paper-plane"></i></button>
+          </div>
+          <div class="newsletter-error" id="newsletterError"><i class="fas fa-exclamation-circle"></i> Please enter a valid email.</div>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Stackly Car Rentals. All rights reserved. | Designed for the open road.</p></div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+  <script src="pricing.js"></script>
+</body>
+</html>

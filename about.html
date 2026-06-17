@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>About Us – Stackly Premium Car Rentals USA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="page-loader">
+        <div class="loader-logo">STACKLY</div>
+        <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- CURSOR -->
+    <div class="cursor-glow"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo-removebg-preview.webp" alt="Stackly" class="nav-logo-img" />
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn-login"><i class="fas fa-key"></i> Login</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="ham-line ham-top"></span>
+                <span class="ham-line ham-mid"></span>
+                <span class="ham-line ham-bot"></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="about-hero">
+        <canvas id="about-particles"></canvas>
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-img" style="background-image:url('about11.webp')"></div>
+
+        <div class="about-hero-content">
+            <div class="section-label fade-up">Our Story</div>
+            <h1 class="about-hero-title fade-up">
+                We Don't Just Rent <span>Cars.</span><br />
+                We Craft <span>Experiences.</span>
+            </h1>
+            <p class="about-hero-sub fade-up">
+                Founded in 2012, Stackly set out with one mission — to make premium mobility
+                accessible to every American driver. 12 years, 50+ cities, and 50,000+ happy
+                customers later, we're still accelerating.
+            </p>
+            <div class="about-hero-pills fade-up">
+                <span><i class="fas fa-map-marker-alt"></i> 50+ Cities</span>
+                <span><i class="fas fa-car"></i> 500+ Vehicles</span>
+                <span><i class="fas fa-star"></i> 4.9 Rated</span>
+            </div>
+            <div class="scroll-indicator fade-up">
+                <span>Scroll</span>
+                <div class="scroll-line"><div class="scroll-dot"></div></div>
+            </div>
+        </div>
+
+        <div class="hero-slice"></div>
+    </section>
+
+    <!-- ═══ TIMELINE ═══ -->
+    <section class="story-section">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Our Journey</div>
+                <h2 class="section-title">12 Years of <span>Driving Dreams</span></h2>
+                <p class="section-sub">Every milestone shaped who we are today.</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item left fade-timeline-left">
+                    <div class="tl-image-wrap">
+                        <img src="index3 (1).webp" alt="2012 Founding" />
+                        <div class="tl-year-badge">2012</div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-dot"></div>
+                        <h3>Humble Beginnings</h3>
+                        <p>Three friends, six cars, and one Los Angeles garage. Stackly launched with a simple promise — arrive in style, every time.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right fade-timeline-right">
+                    <div class="tl-content">
+                        <div class="tl-dot"></div>
+                        <h3>Going National</h3>
+                        <p>By 2015 we had expanded across 20 US metros, partnered with 5-star hotels, and introduced America's first chauffeur-driven luxury rental tier.</p>
+                    </div>
+                    <div class="tl-image-wrap">
+                        <img src="index4 (1).webp" alt="2015 Expansion" />
+                        <div class="tl-year-badge">2015</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left fade-timeline-left">
+                    <div class="tl-image-wrap">
+                        <img src="abouthtml3.webp" alt="2019 Electric" />
+                        <div class="tl-year-badge">2019</div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-dot"></div>
+                        <h3>Going Green</h3>
+                        <p>Stackly became the first US rental platform to launch an all-electric tier — Tesla, Porsche Taycan and Hyundai IONIQ, zero emissions, maximum thrill.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right fade-timeline-right">
+                    <div class="tl-content">
+                        <div class="tl-dot"></div>
+                        <h3>50,000 Happy Customers</h3>
+                        <p>2024 marked a record year. 50k customers, 4.9★ rating on every platform, and a fleet upgrade to 500+ vehicles across economy, SUV, luxury, and sports.</p>
+                    </div>
+                    <div class="tl-image-wrap">
+                        <img src="abouthtml4.webp" alt="2024 Milestone" />
+                        <div class="tl-year-badge">2024</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ MISSION & VALUES ═══ -->
+    <section class="values-section">
+        <div class="values-bg-glow"></div>
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Mission &amp; Values</div>
+                <h2 class="section-title">What We <span>Stand For</span></h2>
+                <p class="section-sub">Every vehicle, every booking, every interaction is guided by these principles.</p>
+            </div>
+
+            <div class="values-split">
+                <div class="values-mission slide-right">
+                    <div class="mission-quote-mark">"</div>
+                    <blockquote>
+                        To democratise premium mobility in America — so that every journey,
+                        not just the destination, feels extraordinary.
+                    </blockquote>
+                    <div class="mission-img-stack">
+                        <img class="mimg mimg-back" src="abouthtml5.webp" alt="Fleet" />
+                        <img class="mimg mimg-front" src="abouthtml6.webp" alt="Luxury interior" />
+                    </div>
+                </div>
+
+                <div class="values-cards slide-left">
+                    <div class="val-card fade-up">
+                        <div class="val-icon"><i class="fas fa-gem"></i></div>
+                        <h4>Premium Quality</h4>
+                        <p>Every vehicle is inspected, sanitised, and serviced before each rental. Zero compromise, every time.</p>
+                    </div>
+                    <div class="val-card fade-up">
+                        <div class="val-icon"><i class="fas fa-handshake"></i></div>
+                        <h4>Radical Transparency</h4>
+                        <p>What you see is what you pay. No hidden fees, no surprise charges. Just honest pricing.</p>
+                    </div>
+                    <div class="val-card fade-up">
+                        <div class="val-icon"><i class="fas fa-leaf"></i></div>
+                        <h4>Sustainable Mobility</h4>
+                        <p>30% of our fleet is electric or hybrid. We're committed to net-zero emissions by 2030.</p>
+                    </div>
+                    <div class="val-card fade-up">
+                        <div class="val-icon"><i class="fas fa-users"></i></div>
+                        <h4>People First</h4>
+                        <p>Our team of 800+ staff across the US treat every customer like family — before, during, and after the ride.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ TEAM – updated with 4 social icons each ═══ -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">The People</div>
+                <h2 class="section-title">Meet the <span>Drivers Behind Stackly</span></h2>
+                <p class="section-sub">Passionate about cars. Obsessed with customer experience.</p>
+            </div>
+
+            <div class="team-grid">
+
+                <!-- Rohan Verma -->
+                <div class="team-card fade-up">
+                    <div class="team-img-wrap">
+                        <img src="abouthtml7.webp" alt="Rohan Verma" />
+                        <div class="team-social">
+                            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Rohan Verma</h3>
+                        <span>Co-founder &amp; CEO</span>
+                        <p>Ex-McKinsey. Car enthusiast. Believes every drive should feel like the first time.</p>
+                    </div>
+                </div>
+
+                <!-- Ananya Iyer -->
+                <div class="team-card fade-up">
+                    <div class="team-img-wrap">
+                        <img src="abouthtml8.webp" alt="Ananya Iyer" />
+                        <div class="team-social">
+                            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ananya Iyer</h3>
+                        <span>Co-founder &amp; COO</span>
+                        <p>IIM Ahmedabad. Operations genius who scaled Stackly from 6 cars to 500+ in under a decade.</p>
+                    </div>
+                </div>
+
+                <!-- Karan Mehta -->
+                <div class="team-card fade-up">
+                    <div class="team-img-wrap">
+                        <img src="abouthtml9.webp" alt="Karan Mehta" />
+                        <div class="team-social">
+                            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Karan Mehta</h3>
+                        <span>Head of Fleet</span>
+                        <p>20 years in the auto industry. Every car in our fleet is personally approved by him.</p>
+                    </div>
+                </div>
+
+                <!-- Priya Nair -->
+                <div class="team-card fade-up">
+                    <div class="team-img-wrap">
+                        <img src="abouthtml10.webp" alt="Priya Nair" />
+                        <div class="team-social">
+                            <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="404.html"><i class="fab fa-twitter"></i></a>
+                            <a href="404.html"><i class="fab fa-instagram"></i></a>
+                            <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Priya Nair</h3>
+                        <span>Head of Customer Success</span>
+                        <p>The voice behind our 24/7 support. Turned a complaints desk into America's best-rated rental helpline.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ AWARDS & PRESS ═══ -->
+    <section class="awards-section">
+        <div class="awards-bg"></div>
+        <div class="container">
+            <div class="section-head fade-up">
+                <div class="section-label">Recognition</div>
+                <h2 class="section-title">Awards &amp; <span>Press</span></h2>
+                <p class="section-sub">The industry agrees — Stackly sets the standard.</p>
+            </div>
+
+            <div class="awards-grid">
+                <div class="award-card fade-up">
+                    <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="award-body">
+                        <h4>Best Car Rental Platform 2024</h4>
+                        <span>USA Auto Excellence Awards</span>
+                    </div>
+                </div>
+                <div class="award-card fade-up">
+                    <div class="award-icon"><i class="fas fa-medal"></i></div>
+                    <div class="award-body">
+                        <h4>Top 10 Startups to Watch</h4>
+                        <span>Forbes USA, 2023</span>
+                    </div>
+                </div>
+                <div class="award-card fade-up">
+                    <div class="award-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="award-body">
+                        <h4>Green Mobility Pioneer</h4>
+                        <span>EV Summit USA, 2023</span>
+                    </div>
+                </div>
+                <div class="award-card fade-up">
+                    <div class="award-icon"><i class="fas fa-star"></i></div>
+                    <div class="award-body">
+                        <h4>Customer Choice #1</h4>
+                        <span>Trustpilot USA, 2024</span>
+                    </div>
+                </div>
+                <div class="award-card fade-up">
+                    <div class="award-icon"><i class="fas fa-newspaper"></i></div>
+                    <div class="award-body">
+                        <h4>Featured in Forbes USA</h4>
+                        <span>"The Future of Car Rentals", 2024</span>
+                    </div>
+                </div>
+                <div class="award-card fade-up">
+                    <div class="award-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div class="award-body">
+                        <h4>ISO 9001:2015 Certified</h4>
+                        <span>Quality Management System</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="press-strip fade-up">
+                <span class="press-label">As seen in</span>
+                <div class="press-logos">
+                    <div class="press-logo">Forbes USA</div>
+                    <div class="press-logo">Wall Street Journal</div>
+                    <div class="press-logo">TechCrunch</div>
+                    <div class="press-logo">Inc. Magazine</div>
+                    <div class="press-logo">Bloomberg</div>
+                    <div class="press-logo">Business Insider</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo-wrap">
+                        <img src="logo-removebg-preview.webp" alt="Stackly" class="footer-logo-img" />
+                        
+                    </div>
+                    <p>America's most trusted premium car rental platform. Experience the road like never before.</p>
+                    <div class="footer-social">
+                        <a href="404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="404.html"><i class="fab fa-instagram"></i></a>
+                        <a href="404.html"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Fleet</h4>
+                    <ul>
+                        <li><a href="services.html">Luxury Cars</a></li>
+                        <li><a href="services.html">SUVs</a></li>
+                        <li><a href="services.html">Electric Vehicles</a></li>
+                        <li><a href="services.html">Sports Cars</a></li>
+                        <li><a href="services.html">Economy Cars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">24/7 Helpline</a></li>
+                        <li><a href="404.html">FAQs</a></li>
+                        <li><a href="404.html">Cancellation Policy</a></li>
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe to get exclusive offers &amp; new car alerts.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your email address" id="footerEmail" />
+                        <button id="footerSubscribe"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                    <div class="newsletter-error" id="newsletterError">
+                        <i class="fas fa-exclamation-circle"></i> Please enter a valid email.
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly Car Rentals USA. All rights reserved. | Designed for the open road.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

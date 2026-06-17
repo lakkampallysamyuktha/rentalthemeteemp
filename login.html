@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-hero"></div>
+    <div class="bg-grid"></div>
+
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-home" id="backHomeBtn">
+        <i class="fas fa-chevron-left"></i>
+        <span>Home</span>
+    </a>
+
+    <!-- MAIN CARD -->
+    <main>
+        <div class="auth-wrap">
+            <div class="auth-card">
+                <!-- Header -->
+                <div class="auth-header">
+                    <div class="brand-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to your account</p>
+                </div>
+
+                <!-- Login Form -->
+                <form id="loginForm" novalidate>
+                    <!-- Username -->
+                    <div class="field-group">
+                        <label class="field-label" for="loginUsername">Username</label>
+                        <div class="field-wrap">
+                            <i class="fas fa-user field-icon"></i>
+                            <input type="text" id="loginUsername" placeholder="johndoe" required />
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field-group">
+                        <label class="field-label" for="loginEmail">Email Address</label>
+                        <div class="field-wrap">
+                            <i class="fas fa-envelope field-icon"></i>
+                            <input type="email" id="loginEmail" placeholder="you@example.com" required />
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="field-group">
+                        <label class="field-label" for="loginPassword">Password</label>
+                        <div class="field-wrap">
+                            <i class="fas fa-lock field-icon"></i>
+                            <input type="password" id="loginPassword" placeholder="Your password" required minlength="6" />
+                            <button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Role Selection -->
+                    <div class="field-group">
+                        <label class="field-label" for="loginRole">Select Role</label>
+                        <div class="field-wrap">
+                            <i class="fas fa-user-tag field-icon"></i>
+                            <select id="loginRole" required>
+                                <option value="">Choose a role</option>
+                                <option value="admin">Admin</option>
+                                <option value="viewer">Viewer</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Options -->
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" /> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn-submit">
+                        Sign In <i class="fas fa-arrow-right"></i>
+                    </button>
+
+                    <div class="auth-error" id="loginError"></div>
+                </form>
+
+                <!-- Divider -->
+                <div class="divider">
+                    <span>or continue with</span>
+                </div>
+
+                <!-- Social Buttons -->
+              <a href="404.html" class="social-btn google">
+    <i class="fab fa-google"></i>
+    <span>Google</span>
+</a>
+<a href="404.html" class="social-btn github">
+    <i class="fab fa-github"></i>
+    <span>GitHub</span>
+</a>
+
+                <!-- Footer with working Sign Up link -->
+                <p class="auth-footer">
+                    Don't have an account? <a href="signup.html" id="signupLink">Sign Up</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>
